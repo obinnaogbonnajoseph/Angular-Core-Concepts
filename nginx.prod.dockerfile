@@ -3,7 +3,7 @@ FROM node:latest as node
 LABEL author="Dan Wahlin"
 WORKDIR /app
 COPY package.json package-lock.json ./
-RUN npm install
+RUN npm i
 COPY . .
 RUN npm run build -- --prod
 
